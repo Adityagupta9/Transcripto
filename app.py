@@ -72,7 +72,6 @@ def upload_file():
     file.save(input_video_path)
 
     model_name = request.form.get('model', 'base')
-
     threading.Thread(target=run_transcription, args=(input_video_path, model_name)).start()
 
     return jsonify({'status': 'processing'})
