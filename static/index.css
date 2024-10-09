@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #10103a; /* Dark background */
+    padding: 10px 0; /* Vertical padding */
+    width: 100%; /* Full width */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align with the left edge */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 10px; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use Flexbox for horizontal layout */
+    justify-content: lefft; /* Center items horizontally */
+}
+
+.navbar li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Transition effect for hover */
+}
+
+.navbar a:hover {
+    color: #8786b0; /* Change color on hover */
+}
+
+.container {
+    display: flex; /* Align the heading and form in a row */
+    flex-direction: column; /* Stack them vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 80px; /* Add margin to the top to prevent overlap with navbar */
+}
+
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #10103a;
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+    margin-bottom: 15px; /* Add some margin below the button */
+}
+
+.custom-file-upload:hover {
+    background-color: #3f3d52;
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #f3f1ff;
+    color: rgb(18, 12, 46);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 0.5px solid rgba(13, 5, 33, 0.677);
+}
+
+button:hover {
+    background-color: #221b52;
+    color: #d6cfff;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 15px;
+    height: 20px;
+    display: none; /* Initially hidden */
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: #007bff;
+    border-radius: 5px;
+    text-align: center; /* Center text inside the progress bar */
+    color: white;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #0a0c2f; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden initially */
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

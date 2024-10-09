@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+    background-color: #10103a; /* Dark background */
+    padding: 10px 0; /* Vertical padding */
+    width: 100%; /* Full width */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align with the left edge */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 10px; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use Flexbox for horizontal layout */
+    justify-content: lefft; /* Center items horizontally */
+}
+
+.navbar li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Transition effect for hover */
+}
+
+.navbar a:hover {
+    color: #8786b0; /* Change color on hover */
+}
+        .container {
+            
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 100px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button {
+            background-color: #10103a;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #3f3d52; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar">
+            <ul>
+            <a href="/"><li>Home</li></a>
+            <a href="/about"><li>About</li></a> <!-- Updated link -->
+            <a href="/contact"><li>Contact</li></a> <!-- Updated link -->
+         </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/submit_contact" method="post"> <!-- Add your action here -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

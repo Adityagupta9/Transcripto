@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+    background-color: #10103a; /* Dark background */
+    padding: 10px 0; /* Vertical padding */
+    width: 100%; /* Full width */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align with the left edge */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 10px; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use Flexbox for horizontal layout */
+    justify-content: lefft; /* Center items horizontally */
+}
+
+.navbar li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Transition effect for hover */
+}
+
+.navbar a:hover {
+    color: #8786b0; /* Change color on hover */
+}
+        .container {
+            
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 100px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar">
+            <ul>
+            <a href="/"><li>Home</li></a>
+            <a href="/about"><li>About</li></a> <!-- Updated link -->
+            <a href="/contact"><li>Contact</li></a> <!-- Updated link -->
+         </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>
+            Welcome to Transcripto! Our mission is to make audio transcription accessible and efficient for everyone.
+            With our innovative application, users can easily upload videos, and our advanced Whisper model will transcribe the audio into text,
+            complete with speaker labels and timestamps.
+        </p>
+        <p>
+            Whether you're a student, professional, or just someone who needs to convert audio to text, Transcripto is designed with you in mind. 
+            We prioritize user experience and strive to provide accurate and timely transcriptions.
+        </p>
+        <p>
+            Thank you for choosing Transcripto, and we hope you enjoy using our service!
+        </p>
+    </div>
+</body>
+</html>

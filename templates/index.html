@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+    <link rel="stylesheet" href="/static/index.css"> <!-- Link to your CSS file -->
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+            <a href="/"><li>Home</li></a>
+            <a href="/about"><li>About</li></a> <!-- Updated link -->
+            <a href="/contact"><li>Contact</li></a> <!-- Updated link -->
+         </ul>
+        </nav>
+        <h1>Welcome to Transcripto</h1>
+        <form id="upload-form">
+            <label for="video">Select video:</label>
+            <label class="custom-file-upload" for="video">
+                <span id="file-name">Choose File</span>
+                <input type="file" name="video" id="video" accept="video/*" required style="display: none;">
+            </label>
+
+            <label for="model">Select Whisper Model:</label>
+            <select name="model" id="model">
+                <option value="base">Base</option>  
+                <option value="tiny">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="loader" id="loader"></div> <!-- Loader -->
+    </div>
+
+    <script>
+        document.getElementById('video').addEventListener('change', function() {
+            const fileName = this.files[0] ? this.files[0].name : 'Choose File';
+            document.getElementById('file-name').textContent = fileName;
+        });
+
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(this);
+            const loader = document.getElementById('loader');
+
+            // Show loader
+            loader.style.display = 'block';
+
+            // Send the video file to the server
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json())
+            .then(data => {
+                if (data.status === 'processing') {
+                    checkStatus();
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                loader.style.display = 'none'; // Hide loader on error
+            });
+        });
+
+        function checkStatus() {
+            const loader = document.getElementById('loader');
+
+            const interval = setInterval(() => {
+                fetch('/status')
+                .then(response => response.json())
+                .then(status => {
+                    if (status.completed) {
+                        clearInterval(interval);
+                        window.location.href = '/transcript'; // Redirect to transcript page
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }, 1000); // Check every second
+        }
+    </script>
+</body>
+</html>

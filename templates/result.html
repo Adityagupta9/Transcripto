@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcription Result</title>
+    <link rel="stylesheet" href="../static/result.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <a href="/"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="Contact.html"><li>Contact</li></a>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Transcription Result</h1>
+        <div class="transcription">
+            {{ transcription|safe }}
+        </div>
+        <a href="/" class="upload-button">Upload another video</a> <!-- Styled link -->
+    </div>
+</body>
+</html>
