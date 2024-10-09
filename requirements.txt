@@ -85,3 +85,4 @@ watchdog==4.0.0
 wcwidth==0.2.13
 Werkzeug==2.2.3
 whisper==1.1.10
+gunicorn==21.0.0
