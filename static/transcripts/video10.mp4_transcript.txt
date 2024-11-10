@@ -1,0 +1,78 @@
+SPEAKER_SPEAKER_00 00:00:00
+ That's it.
+
+SPEAKER_SPEAKER_00 00:00:01
+So can this then why we are not considering map as a collection or why map is not considered as a collection.
+
+SPEAKER_SPEAKER_00 00:00:08
+I do on that.
+
+SPEAKER_SPEAKER_02 00:00:10
+So only I know is map can hold key value pass that's all.
+
+SPEAKER_SPEAKER_00 00:00:18
+Okay, we shall so we are done with the technical route and can we move on the next
+
+SPEAKER_SPEAKER_02 00:00:25
+ I have one can I ask something, so what will happen in the try catch, what you mentioned, to know that.
+
+SPEAKER_SPEAKER_00 00:00:35
+So in that particular example, it will get some compilation error, because already the exception is cashed by the super class that is exception.
+
+SPEAKER_SPEAKER_00 00:00:48
+ Okay.
+
+SPEAKER_SPEAKER_00 00:00:48
+So already in the first cache, if we have mentioned exception right, so then there is no need to put the other sub class that is arithmetic exception.
+
+SPEAKER_SPEAKER_00 00:00:57
+So hence we will get the compilation here.
+
+SPEAKER_SPEAKER_02 00:01:01
+Okay.
+
+SPEAKER_SPEAKER_02 00:01:01
+Thank you.
+
+SPEAKER_SPEAKER_00 00:01:04
+Thank you.
+
+SPEAKER_SPEAKER_01 00:01:07
+Yeah.
+
+SPEAKER_SPEAKER_01 00:01:08
+Thank you, Roshni.
+
+SPEAKER_SPEAKER_01 00:01:09
+So, fine.
+
+SPEAKER_SPEAKER_01 00:01:11
+So, you are completely technical on right.
+
+SPEAKER_SPEAKER_01 00:01:14
+Okay.
+
+SPEAKER_SPEAKER_01 00:01:14
+Fine.
+
+SPEAKER_SPEAKER_01 00:01:14
+I'll take on with the manager room.
+
+SPEAKER_SPEAKER_00 00:01:18
+ Thank you.
+
+SPEAKER_SPEAKER_01 00:01:20
+Yeah.
+
+SPEAKER_SPEAKER_01 00:01:21
+So, fine, Vishal, I would like to know like, what is your comfort level in Java like?
+
+SPEAKER_SPEAKER_01 00:01:29
+You have just had the basics or just off to medium level or you are very good at Java can I know?
+
+SPEAKER_SPEAKER_02 00:01:37
+Sir, I'm basics to medium.
+
+SPEAKER_SPEAKER_02 00:01:39
+I cannot confirm better basics or
+

@@ -1,0 +1,48 @@
+SPEAKER_SPEAKER_00 00:00:00
+ Do you prefer to take photos of yourself or other things?
+
+SPEAKER_SPEAKER_01 00:00:03
+Of other things.
+
+SPEAKER_SPEAKER_01 00:00:05
+It's kind of hard to take pictures of yourself, unless it's a selfie and that's limited.
+
+SPEAKER_SPEAKER_01 00:00:11
+So pictures of other things, mostly.
+
+SPEAKER_SPEAKER_00 00:00:14
+Now let's talk about animals.
+
+SPEAKER_SPEAKER_00 00:00:16
+Do you like animals?
+
+SPEAKER_SPEAKER_01 00:00:17
+I love animals.
+
+SPEAKER_SPEAKER_01 00:00:19
+Lend animals, friendly, so-to-speak animals, not insects and not anything from the ocean.
+
+SPEAKER_SPEAKER_00 00:00:25
+What is your favorite animal?
+
+SPEAKER_SPEAKER_01 00:00:27
+ Probably a dog, dogs, for obvious reasons you can keep them as pets.
+
+SPEAKER_SPEAKER_01 00:00:32
+In terms of like non-domesticated animals, probably jaguars.
+
+SPEAKER_SPEAKER_00 00:00:36
+Do you have any animals in your home as pets?
+
+SPEAKER_SPEAKER_01 00:00:39
+Yes.
+
+SPEAKER_SPEAKER_01 00:00:40
+I have two dogs.
+
+SPEAKER_SPEAKER_01 00:00:42
+They're both from the shelter, the animal shelter, the rescues.
+
+SPEAKER_SPEAKER_01 00:00:46
+I've always had pets or family really likes keeping animals around.
+

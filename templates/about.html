@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+       body {
+    background-color: #1c1f23; /* Dark background */
+    color: white; /* White text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+}
+
+        nav {
+    background-color: #13161a; /* Dark background for nav */
+    padding: 15px; /* Padding around nav */
+    width: 100%; /* Full width */
+    position: absolute; /* Positioned at the top */
+    top: 0; /* Aligns with the top */
+    justify-content: left;
+    align-items:flex-start ;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.welcome {
+    font-family: "Caveat", cursive;
+    position: absolute; /* Position it absolutely */
+    top: 20%; /* Space from the top */
+    left: 20px; /* Space from the left */
+    font-size: 34px; /* Larger font size */
+    color: #fff; /* White text color */
+    text-align: left; /* Align text to the left */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Flexbox layout */
+    justify-content: left; /* Center items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    justify-content: left;
+    margin: 5px 15px; /* Space between items */
+}
+
+nav a {
+    color: #bababa; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 16px; /* Padding around links */
+    border-radius: 4px; /* Rounded corners */
+   transition: 0.3s;
+   justify-content: left;
+   
+}
+
+nav a:hover {
+    color: #fff;
+  
+}
+
+        .about {
+            background-color: #121418; /* Dark background for sections */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Padding around sections */
+            width: 80%; /* Full width */
+            max-width: 600px; /* Maximum width */
+            margin: 20px auto; /* Center the sections */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            color: #fff; /* White text color */
+            text-align: left; /* Align text to the left */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ababab; /* Slightly lighter color for headings */
+        }
+
+        p {
+            margin-bottom: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/results">Results</a></li>
+        </ul>
+    </nav>
+    <div class="about">
+        <h1>About Transcripto</h1>
+        <p>
+            Transcripto is an innovative web application designed to simplify the process of video transcription. 
+            Our goal is to make transcription accessible and efficient for everyone, whether you're a student, 
+            professional, or content creator. With advanced features powered by AI, we ensure accurate and timely 
+            transcriptions tailored to your needs.
+        </p>
+        <p>
+            Our application not only transcribes audio but also identifies speakers and timestamps, providing 
+            a structured and user-friendly experience. Join us in revolutionizing how we transcribe and process 
+            audio-visual content!
+        </p>
+    </div>
+
+    <script>
+        // Optional: Add any JavaScript functionalities if required
+    </script>
+</body>
+</html>

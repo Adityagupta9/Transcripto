@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcripto</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/results">Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="welcome">
+        Hii, welcome to Transcripto
+    </div>
+
+    <div id="loader">
+    <div class="spinner"></div>
+    <h2>Processing your video<span class="blinking">...</span></h2>
+</div>
+
+    
+
+    <h1>Upload your video</h1>
+    <form id="uploadForm" action="/" method="POST" enctype="multipart/form-data" onsubmit="showLoader()">
+        <label class="custom-file-upload" for="video">
+            <span id="file-name">Choose File</span>
+            <input type="file" name="file" id="video" accept="video/mp4" required onchange="updateFileName()">
+        </label>
+        
+        <label for="model">Select Processing Level:</label>
+        <select name="model" id="model" required>
+            <option value="tiny">Fast & Basic</option>
+            <option value="base">Very Quick</option>
+            <option value="small">Quick</option>
+            <option value="medium">Balanced</option>
+            <option value="large">High Quality (Advanced)</option>
+            <option value="large-v2">Best Quality</option>
+        </select>
+        
+        <button type="submit" id="upload">Upload and Transcribe</button>
+    </form>
+
+    <script>
+        function showLoader() {
+            document.getElementById('loader').style.display = 'flex';
+        }
+
+        function updateFileName() {
+            const fileInput = document.getElementById('video');
+            const fileNameLabel = document.getElementById('file-name');
+            const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'Choose File';
+            fileNameLabel.textContent = fileName; 
+        }
+    </script>
+<canvas id="accuracyChart" width="150" height="50"></canvas>
+
+<script>
+    // Data for model accuracies
+    const labels = ['Fast & Basic', 'Very Quick', 'Quick', 'Balanced', 'High Quality (Advanced)', 'Best Quality'];    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Model Accuracy (%)',
+            data: [50, 60, 70, 80, 90, 95],
+            backgroundColor: [
+    'rgba(0, 0, 139, 0.2)', 
+    'rgba(25, 25, 112, 0.2)',  
+    'rgba(0, 0, 205, 0.2)', 
+    'rgba(72, 61, 139, 0.2)', 
+    'rgba(65, 105, 225, 0.2)',  
+    'rgba(70, 130, 180, 0.2)' 
+],
+borderColor: [
+    'rgba(0, 0, 139, 1)',  
+    'rgba(25, 25, 112, 1)', 
+    'rgba(0, 0, 205, 1)',  
+    'rgba(72, 61, 139, 1)', 
+    'rgba(65, 105, 225, 1)',
+    'rgba(70, 130, 180, 1)'  
+],
+
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: '#fff' 
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#fff' 
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff'
+                    }
+                }
+            }
+        }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('accuracyChart'),
+        config
+    );
+</script>
+
+</body>
+</html>

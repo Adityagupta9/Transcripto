@@ -1,0 +1,33 @@
+SPEAKER_SPEAKER_02 00:00:00
+ What's the word?
+
+SPEAKER_SPEAKER_00 00:00:01
+Pneumonoultramicroscopicsilicovolcanoconiosis.
+
+SPEAKER_SPEAKER_00 00:00:05
+What did you say?
+
+SPEAKER_SPEAKER_00 00:00:06
+Pneumonoultramicroscopicsilicovolcanoconiosis.
+
+SPEAKER_SPEAKER_02 00:00:10
+Okay.
+
+SPEAKER_SPEAKER_02 00:00:11
+Um, is there any other alternate pronunciations, please?
+
+SPEAKER_SPEAKER_02 00:00:14
+We don't know what that one is.
+
+SPEAKER_SPEAKER_01 00:00:19
+Definition, please.
+
+SPEAKER_SPEAKER_00 00:00:21
+Referring to a lung disease caused by silica dust.
+
+SPEAKER_SPEAKER_03 00:00:25
+Okay.
+
+SPEAKER_SPEAKER_03 00:00:27
+ P, N, E, U, M, O, N, O, U, L, T, R, A, M, I, C, R, O, S, C, O, P, I, C, S, I, L, I, C,
+

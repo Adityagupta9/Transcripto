@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+    background-color: #1c1f23; /* Dark background */
+    color: white; /* White text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+}
+
+    nav {
+        background-color: #13161a; /* Dark background for nav */
+        padding: 15px; /* Padding around nav */
+        width: 100%; /* Full width */
+        position: absolute; /* Positioned at the top */
+        top: 0; /* Aligns with the top */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+        list-style-type: none; /* Remove bullet points */
+        display: flex; /* Flexbox layout */
+        justify-content: left; /* Center items */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    nav ul li {
+        margin: 5px 15px; /* Space between items */
+    }
+
+    nav a {
+        color: #bababa; /* White text for links */
+        text-decoration: none; /* Remove underline */
+        padding: 8px 16px; /* Padding around links */
+        border-radius: 4px; /* Rounded corners */
+    transition: 0.3s;
+    
+    }
+
+    nav a:hover {
+        color: #fff;
+    
+    }
+
+        .contact {
+            background-color: #121418; /* Dark background for sections */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Padding around sections */
+            width: 80%; /* Full width */
+            max-width: 600px; /* Maximum width */
+            margin: 20px auto; /* Center the sections */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            color: #fff; /* White text color */
+            text-align: left; /* Align text to the left */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ababab; /* Slightly lighter color for headings */
+        }
+
+        label {
+            display: block; /* Block display for labels */
+            margin-bottom: 5px; /* Margin below labels */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 95%; /* Full width */
+            padding: 10px; /* Padding */
+            margin-bottom: 15px; /* Space below fields */
+            border: 1px solid #121418; /* Dark border */
+            border-radius: 5px; /* Rounded edges */
+            background-color: #ffffffd1; /* Button color */
+            color: #121418; /* Button text color */
+        }
+
+        button {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded edges */
+            background-color: #1d1a2900; /* Button color */
+            color: rgb(216, 216, 216); /* Button text color */
+            cursor: pointer; /* Pointer cursor */
+            transition: 0.3s; /* Transition effect */
+        }
+
+        button:hover {
+            background-color: #cecece; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/results">Results</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact">
+        <h1>Contact Us</h1>
+        <form id="contactForm" action="/submit_contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        // Optional: Add any JavaScript functionalities if required
+    </script>
+</body>
+</html>

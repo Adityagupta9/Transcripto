@@ -1,0 +1,168 @@
+body {
+    background-color: #1c1f23; /* Dark background */
+    color: white; /* White text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 190vh; /* Full height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #13161a; /* Dark background for nav */
+    padding: 15px; /* Padding around nav */
+    width: 100%; /* Full width */
+    position: absolute; /* Positioned at the top */
+    top: 0; /* Aligns with the top */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.welcome {
+    font-family: "Caveat", cursive;
+    position: absolute; /* Position it absolutely */
+    top: 20%; /* Space from the top */
+    left: 20px; /* Space from the left */
+    font-size: 34px; /* Larger font size */
+    color: #fff; /* White text color */
+    text-align: left; /* Align text to the left */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Flexbox layout */
+    justify-content: left; /* Center items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 5px 15px; /* Space between items */
+}
+
+nav a {
+    color: #bababa; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 16px; /* Padding around links */
+    border-radius: 4px; /* Rounded corners */
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ababab; /* Slightly lighter color for the heading */
+}
+
+/* Form styles */
+form {
+    justify-content: left;
+    background-color: #121418; /* Dark background for the form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+    width: 300px; /* Fixed width */
+    text-align: left; /* Center text */
+    transition: 0.5s;
+}
+
+form:hover {
+    transform: scale(1.03);
+}
+
+label {
+    display: block; /* Block display for labels */
+    color: #fff; /* White color for labels */
+    margin-bottom: 10px; /* Margin below labels */
+}
+
+.custom-file-upload {
+    font-size: 13px;
+    display: inline-block; /* Inline block for better layout */
+    padding: 10px 2px; /* Space inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: 1px solid #fff; /* White border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffffd1; /* Button color */
+    color: #121418; /* Button text color */
+    width: 40%; /* Full width */
+    text-align: center; /* Center text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.custom-file-upload:hover {
+    background-color: #ffffff60; /* Darker blue on hover */
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin: 10px 0; /* Margin between elements */
+    border: 1px solid #121418; /* Dark border */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 14px; /* Font size */
+    background-color: rgb(16, 14, 29); /* Black background for select */
+    color: #ffffffe7; /* Light text color */
+}
+
+button {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    margin: 10px 0; /* Margin between elements */
+    border: 0.5px solid rgba(255, 255, 255, 0.778);
+    border-radius: 5px; /* Rounded edges */
+    font-size: 14px; /* Font size */
+    background-color: #1d1a2900; /* Button color */
+    color: rgb(216, 216, 216); /* Button text color */
+    cursor: pointer; /* Pointer cursor */
+    transition: 0.3s;
+}
+
+button:hover {
+    color: #121418;
+    background-color: #cecece; /* Darker green on hover */
+}
+
+/* Loader styles */
+#loader {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.522); /* Slightly transparent white */
+    z-index: 1000; /* Ensure it appears above other content */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+#loader h2 {
+    color: rgb(17, 17, 23);
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Light gray */
+    border-top: 8px solid #121418; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px; /* Space between spinner and text */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

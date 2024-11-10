@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Transcription Result</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Transcription Result</h1>
+        <div class="transcription">
+            {% for segment in transcript %}
+                <div class="transcription-segment">
+                    <strong>{{ segment.speaker }}</strong>
+                    <span style="background-color: white; border-radius: 4px; color: #121418; padding: 2px 5px;">
+                        {{ segment.timestamp }}
+                    </span>
+                    <p>{{ segment.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <button id="show-images-btn">Show Speaker Images</button>
+        <a href="{{ url_for('download_file', filename=transcript_file_path) }}">
+            <button id="download-trans">Download Transcript</button>
+        </a>
+
+        <div id="image-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Speaker Images</h2>
+                <div id="images-container" class="card-container">
+                    {% for frame in labeled_frames %}
+                        <div class="card">
+                            <h3>{{ frame.speaker }}</h3>
+                            <img src="{{ frame.image_path }}" alt="{{ frame.speaker }}" class="speaker-image">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("image-modal");
+        var btn = document.getElementById("show-images-btn");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.classList.add("show");
+        }
+
+        closeBtn.onclick = function() {
+            modal.classList.remove("show");
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove("show");
+            }
+        }
+    </script>
+</body>
+</html>
